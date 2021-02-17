@@ -1,10 +1,50 @@
 # PokedexApp
 
+## Setup
+
+The first thing to do is to clone the repository:
+
+```sh
+$ git clone https://github.com/MrDavid0614/Pokedex-PokeAPI
+$ cd Pokedex-PokeAPI
+```
+
+## **Backend**
+
+Create a virtual environment to install dependencies in and activate it:
+
+```sh
+$ virtualenv2 --no-site-packages env
+$ source env/bin/activate
+```
+
+Then install the dependencies:
+
+```sh
+(env)$ pip install -r requirements.txt
+```
+Note the `(env)` in front of the prompt. This indicates that this terminal
+session operates in a virtual environment set up by `virtualenv2`.
+
+Once `pip` has finished downloading the dependencies:
+```sh
+(env)$ cd backend
+(env)$ python manage.py runserver
+```
+
+## **Frontend**
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.2.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+First run:
+
+```sh
+cd frontend
+```
+
+Then, run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
