@@ -20,5 +20,3 @@ def get_pokemon_by_id(id):
         'image': response['sprites']['other']['official-artwork']['front_default']
         }
     return pokemon
-
-print(get_pokemon_by_id(1))
