@@ -1,0 +1,7 @@
+<header class="bg-dark">
+    <h1>{{ title }}</h1>
+    <input class="form-control col-md-4" list="datalistOptions" id="exampleDataList" placeholder="Search a pokémon">
+    <datalist id="datalistOptions">
+        <option *ngFor="let pokemon of pokemons" value="{{ pokemon }}"></option>
+    </datalist>
+</header>

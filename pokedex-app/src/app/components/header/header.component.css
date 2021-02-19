@@ -1,0 +1,14 @@
+header {
+
+    padding: 5px 5px 5px 10px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.form-control {
+
+    margin-top: 10px;
+
+}
