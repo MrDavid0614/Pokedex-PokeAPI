@@ -1,8 +1,10 @@
 import requests
+from backend.settings import BASE_URL
+
+url = f'{BASE_URL}/pokemon'
 
 def get_pokemons():
-    url = 'https://pokeapi.co/api/v2/pokemon?limit=151'
-    response = requests.get(url).json()
+    response = requests.get(f'{url}?limit=151').json()
     pokemons = response['results']
     
     pokemons_list = []
@@ -12,8 +14,7 @@ def get_pokemons():
     return pokemons_list
 
 def get_pokemon_by_id(id):
-    url = f'https://pokeapi.co/api/v2/pokemon/{id}/'
-    response = requests.get(url).json()
+    response = requests.get(f'{url}/{id}/').json()
     pokemon = {
         'id': response['id'],
         'name': response['name'],
