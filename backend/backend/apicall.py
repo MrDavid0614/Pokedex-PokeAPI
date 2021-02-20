@@ -18,6 +18,7 @@ def get_pokemon_by_id(id):
     pokemon = {
         'id': response['id'],
         'name': response['name'],
-        'image': response['sprites']['other']['official-artwork']['front_default']
+        'image': response['sprites']['other']['official-artwork']['front_default'],
+        'type': response['types'][0]['type']['name']
         }
     return pokemon

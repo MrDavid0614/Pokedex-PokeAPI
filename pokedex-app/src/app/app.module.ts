@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { MatTableModule } from '@angular/material/table';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -21,6 +23,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     MatTableModule,
+    MatInputModule,
+    MatFormFieldModule,
     MatPaginatorModule,
     MatCardModule,
     MatToolbarModule,

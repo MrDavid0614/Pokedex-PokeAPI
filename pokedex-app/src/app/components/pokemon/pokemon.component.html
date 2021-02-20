@@ -7,8 +7,12 @@
           <td mat-cell *matCellDef="let pokemon" (click)="getPokemonById(pokemon.id)"> {{pokemon.name|titlecase}} </td>
         </ng-container>
       
-        <tr mat-header-row *matHeaderRowDef="tableService.displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: tableService.displayedColumns;"></tr>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+        <tr class="mat-row" *matNoDataRow>
+          <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+        </tr>
     </table>
     <mat-paginator 
       [length]="pokemonsList.length"
@@ -27,7 +31,7 @@
     <img mat-card-image [src]="selectedPokemon.image" alt="Pokemon Image">
     <mat-card-content>
       <p>
-        This is a pokemon!
+        This is a pokemon of type <span [class]="selectedPokemon.type" id="pokemon-type">{{ selectedPokemon.type |uppercase}}</span>
       </p>
     </mat-card-content>
   </mat-card>

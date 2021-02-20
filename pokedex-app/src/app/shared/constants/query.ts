@@ -12,6 +12,7 @@ export const GET_POKEMON_BY_ID = gql`
             id
             name
             image
+            type
         }
     }
 `;

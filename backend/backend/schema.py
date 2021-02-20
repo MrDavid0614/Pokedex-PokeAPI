@@ -5,6 +5,7 @@ class Pokemon(graphene.ObjectType):
     id = graphene.Int()
     name = graphene.String()
     image = graphene.String()
+    type = graphene.String()
 
 class Query(graphene.ObjectType):
     pokemons = graphene.List(graphene.JSONString)
