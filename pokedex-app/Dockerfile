@@ -1,9 +1,10 @@
 FROM node:12.18.3-alpine as node
+RUN mkdir -p /app
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
-RUN npm build
+RUN npm run build --prod
 
 FROM nginx
 EXPOSE 80

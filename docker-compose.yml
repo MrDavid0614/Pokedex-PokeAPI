@@ -15,6 +15,6 @@ services:
     build: ./backend
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
-      - ./backend:/backend
+      - ./backend:/usr/src/backend
     ports: 
       - 8000:8000
