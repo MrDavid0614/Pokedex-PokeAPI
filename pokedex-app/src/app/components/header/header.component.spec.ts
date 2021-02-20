@@ -22,4 +22,10 @@ describe('HeaderComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have a "Pokémon" title', ()=> {
+    const title = document.querySelector('h1');
+    expect(title.textContent).toEqual('Pokémon');
+  });
+
 });
