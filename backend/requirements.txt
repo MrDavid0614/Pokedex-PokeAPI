@@ -1,0 +1,4 @@
+graphene_django==2.15.0
+graphene==2.1.8
+requests==2.25.1
+Django==3.1.6
