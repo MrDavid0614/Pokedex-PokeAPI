@@ -7,7 +7,7 @@ class Pokemon(graphene.ObjectType):
     image = graphene.String()
 
 class Query(graphene.ObjectType):
-    pokemons = graphene.List(graphene.String)
+    pokemons = graphene.List(graphene.JSONString)
     pokemon = graphene.Field(Pokemon, id=graphene.Int())
 
     def resolve_pokemons(root, info):

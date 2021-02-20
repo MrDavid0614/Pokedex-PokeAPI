@@ -1,16 +1,34 @@
-<div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    </div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">Cras justo odio</li>
-      <li class="list-group-item">Dapibus ac facilisis in</li>
-      <li class="list-group-item">Vestibulum at eros</li>
-    </ul>
-    <div class="card-body">
-      <a href="#" class="card-link">Card link</a>
-      <a href="#" class="card-link">Another link</a>
-    </div>
+<app-header></app-header>
+<div class="container">
+  <div class="table-container">
+    <table mat-table class="mat-elevation-z8" [dataSource]="pageSlice">
+        <ng-container matColumnDef="Name">
+          <th mat-header-cell *matHeaderCellDef> Name </th>
+          <td mat-cell *matCellDef="let pokemon" (click)="getPokemonById(pokemon.id)"> {{pokemon.name|titlecase}} </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="tableService.displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: tableService.displayedColumns;"></tr>
+    </table>
+    <mat-paginator 
+      [length]="pokemonsList.length"
+      [pageSize]="5"
+      [pageSizeOptions]="[5, 10, 15, 20]"
+      (page)="OnPageChange($event)" 
+      showFirstLastButtons>
+    </mat-paginator>
   </div>
+  
+  <mat-card *ngIf="selectedPokemon" class="pokemon-card mat-elevation-z8">
+    <mat-card-header>
+      <div mat-card-avatar class="pokemon-header-image"></div>
+      <mat-card-title>{{ selectedPokemon.name |titlecase }}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="selectedPokemon.image" alt="Pokemon Image">
+    <mat-card-content>
+      <p>
+        This is a pokemon!
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>

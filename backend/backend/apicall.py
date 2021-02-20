@@ -9,7 +9,7 @@ def get_pokemons():
     
     pokemons_list = []
     for pokemon in pokemons:
-        pokemons_list.append(pokemon['name'])
+        pokemons_list.append(pokemon)
     
     return pokemons_list
 

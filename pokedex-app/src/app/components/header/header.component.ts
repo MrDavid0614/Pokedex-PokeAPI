@@ -8,7 +8,6 @@ import { Component, Input, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   title: string = "Pokémon";
-  @Input('data-list') pokemons: string[];
   
   constructor() { }
 

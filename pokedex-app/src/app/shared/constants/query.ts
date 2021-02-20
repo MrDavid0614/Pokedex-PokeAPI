@@ -9,7 +9,9 @@ export const GET_POKEMONS = gql`
 export const GET_POKEMON_BY_ID = gql`
     query getPokemonById($id: Int!){
         pokemon(id: $id) {
+            id
             name
+            image
         }
     }
 `;
