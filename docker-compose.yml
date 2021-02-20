@@ -1,0 +1,20 @@
+  
+version: '3.8'
+
+services:
+  angular:
+    container_name: angular-image
+    build: ./pokedex-app
+    volumes: 
+      - ./pokedex-app:/app
+    ports: 
+      - 4200:80
+    
+  django:
+    container_name: django-image
+    build: ./backend
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./backend:/backend
+    ports: 
+      - 8000:8000
