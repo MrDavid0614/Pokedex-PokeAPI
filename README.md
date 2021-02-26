@@ -62,6 +62,10 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+Also, you can run a docker-compose here:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## **Docker**
+
+Run `docker-compose build` and then `docker-compose up` for start the project container in your PC or run `docker-compose up` which will do both things.
+
+Then go to your browser and navigate to `http://localhost:4200/`, here you'll see the pokedex-app running.
