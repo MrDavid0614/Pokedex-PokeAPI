@@ -6,7 +6,7 @@ describe('Pokemon component', ()=>{
 
         cy.intercept('POST', 'http://localhost:8000/graphql/', { fixture: 'pokemons-list.json' });
 
-        cy.visit('http://localhost:4200');
+        cy.visit('/');
 
     });
 
